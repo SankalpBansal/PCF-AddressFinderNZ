@@ -27,6 +27,8 @@ export class AddressFinderControl implements ComponentFramework.StandardControl<
 
 	private AddressFinder: any;
 
+	private _refreshData: EventListenerOrEventListenerObject;
+
 
 	/**
 	 * Empty constructor.
@@ -48,6 +50,7 @@ export class AddressFinderControl implements ComponentFramework.StandardControl<
 		this._notifyOutputChanged = notifyOutputChanged;
 		this._container = container;
 		this._address_line_1 = this._context.parameters.address_line_1.raw;
+		this._refreshData = this.refreshData.bind(this);
 		this.inputElement = document.createElement("input");
 		this.inputElement.setAttribute("id", "search_field");
 		this.inputElement.setAttribute("type", "text");
@@ -67,6 +70,16 @@ export class AddressFinderControl implements ComponentFramework.StandardControl<
 		inputElement.setAttribute("type", type);
 		inputElement.setAttribute("display", display);
 		return inputElement;
+	}
+
+	public refreshData(evt: Event): void
+	{
+		debugger;
+		if(this.inputElement.value.length==0)
+		{
+			this._address_line_1 = "";
+			this._notifyOutputChanged();
+		}
 	}
 
 

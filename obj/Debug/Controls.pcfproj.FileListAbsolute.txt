@@ -1,2 +1,4 @@
 C:\PCF\Controls\AddressFinder\obj\Debug\Controls.pcfprojAssemblyReference.cache
 C:\PCF\Controls\AddressFinder\obj\Debug\Controls.pcfproj.CoreCompileInputs.cache
+C:\Users\SankalpB\Documents\GitHub\PCF-AddressFinderNZ\obj\Debug\Controls.pcfprojAssemblyReference.cache
+C:\Users\SankalpB\Documents\GitHub\PCF-AddressFinderNZ\obj\Debug\Controls.pcfproj.CoreCompileInputs.cache
