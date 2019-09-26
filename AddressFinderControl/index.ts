@@ -54,7 +54,7 @@ export class AddressFinderControl implements ComponentFramework.StandardControl<
 		this.inputElement = document.createElement("input");
 		this.inputElement.setAttribute("id", "search_field");
 		this.inputElement.setAttribute("type", "text");
-		this.inputElement.value=this._address_line_1;
+		this.inputElement.addEventListener("input",this._refreshData);
 		this._container.appendChild(this.inputElement);
 		container = this._container;
 		//this.mountWidget();
